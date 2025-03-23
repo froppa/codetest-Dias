@@ -1,0 +1,34 @@
+{
+  "name": "codetest-dias",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/index.js",
+  "scripts": {
+    "postinstall": "prisma generate",
+    "build": "tsc --build tsconfig.json",
+    "dev": "ts-node-dev --respawn --exit-child src/index.ts",
+    "test": "./tests/curl_api.sh",
+    "hack:gen:token": "npx tsx hack/gen-token.ts",
+    "hack:gen:seed": "npx tsx hack/seed.ts"
+  },
+  "dependencies": {
+    "@faker-js/faker": "^9.6.0",
+    "@prisma/client": "^6.5.0",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "faker": "^6.6.6",
+    "jsonwebtoken": "^9.0.2",
+    "lodash-es": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/express": "^5.0.1",
+    "@types/jsonwebtoken": "^9.0.9",
+    "@types/lodash-es": "^4.17.12",
+    "@types/node": "^22.13.11",
+    "prisma": "^6.5.0",
+    "ts-node-dev": "^2.0.0",
+    "tsx": "^4.19.3",
+    "typescript": "^5.8.2"
+  }
+}

@@ -6,9 +6,7 @@ This project implements a REST API service in **TypeScript**, using **Express**,
 
 ---
 
-## DB Models
-
-_note: used Int instead of UUID for easier usage (e.g: setting doctorID=1 rather than doctorID=<UUID>)_
+## Models
 
 ### `Doctor`
 - `id` (Int)
@@ -62,7 +60,7 @@ _note: used Int instead of UUID for easier usage (e.g: setting doctorID=1 rather
 |--------|-------------------------------------|---------------------------------------------|
 | POST   | `/api/patients`                     | Create new patient + journal                |
 | GET    | `/api/patients/:id`                 | Get patient (if doctor has access)          |
-| POST   | `/api/patients/:id/assign`          | Assign doctors to a patient (via admission) |
+| POST   | `/api/patients/:id/admission`          | Assign doctors to a patient (via admission) |
 
 ---
 
@@ -76,7 +74,7 @@ Authorization: Bearer <token>
 - Create a doctor via `/api/v1/doctor`
 - Generate token using newly created `doctor.id`
   - e.g: doctor.id: `1`
-  - `npm hack:gen:token 1`
+  - `npm run hack:gen:token 1`
 ---
 
 ## Setup & Usage
@@ -90,22 +88,20 @@ npm run dev
 
 ### Seed database (optional)
 ```bash
-npm hack:gen:seed
+npm run hack:gen:seed
 ```
 
 ### Run tests
 ```bash
-npm tests
+npm run test
 ```
 ---
 
 ## Improvements
 
 - Add unit tests
-- Validation
-- Add Swagger/OpenAPI docs
-- Abstract controller logic and sepparate concerns
+- Proper Validation
+- Sepparation of concerns / DDD 
 - Error handling and logging
 - Access control logic into reusable guards/policies
-- Refactor routes into service-layer / DDD
 ---
