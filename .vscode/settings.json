@@ -1,0 +1,14 @@
+{
+  "editor.rulers": [120, 160],
+  "editor.tabSize": 2,
+  "editor.defaultFormatter": "vscode.typescript-language-features",
+  "editor.formatOnSave": true,
+  "files.insertFinalNewline": true,
+  "prettier.semi": false,
+  "prettier.useEditorConfig": true,
+
+  "typescript.format.semicolons": "remove",
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "minimal",
+  "typescript.preferences.quoteStyle": "single"
+}
